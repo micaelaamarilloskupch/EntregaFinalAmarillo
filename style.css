@@ -20,14 +20,15 @@
         height: auto;
     }
 }
-main {
-    z-index: -1;
-}
+
 
 body {
     background-color: #0d0d0d;
     color: #e6e6e6;
     font-family: 'aespa-font';
+}
+body main {
+    z-index: -1;
 }
 ::-webkit-scrollbar {
     width: 12px;
@@ -94,7 +95,7 @@ body {
 }
 
 .btn-primary {
-    background-color: #00ccff;
+    background-color: #c80000;
     border: none;
 }
 .btn-primary:hover {
