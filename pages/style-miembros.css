@@ -3,21 +3,31 @@
     src: url(/fuentes/aespa-logo-font/aespa_Regular.ttf);
 }
 @media only screen and (max-width: 500px ){
-    .tamano-imagen{
-        width: 100%;
+    .gallery img {
+        width: auto;
         height: auto;
-    } 
-}
-@media only screen and (min-width: 501px) and (max-width: 968px) {
-    .tamano-imagen{
-       width: 60px; 
-       height: auto;
+    }
+    .cada-una{
+        font-size: auto;
     }
 }
+@media only screen and (min-width: 501px) and (max-width: 968px) {
+    .gallery img {
+       width: auto; 
+       height: auto;
+    }
+    .cada-una{
+        font-size: auto;
+    }
+}
+
 @media only screen and (min-width: 961px) {
-    .tamano-imagen{
-        width: 80%;
+    .gallery img {
+        width: auto;
         height: auto;
+    }
+    .cada-una{
+        font-size: auto;
     }
 }
 
@@ -104,4 +114,25 @@ body {
     font-size: 25px;
     list-style: none;
     text-align: left;
+}
+footer {
+    background-color:rgb(0, 0, 74) ;
+    color: rgb(255, 255, 255);
+    font-family: 'aespa-font';
+    font-size: 15px;
+    text-align: center;
+    margin-top: 3cm;
+    bottom: 0;
+    padding: 9px;
+    right: 0;
+}
+.redes ul li img{
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    margin-top: 10px;
+}
+.redes ul li {
+    text-decoration: none;
+    display: inline-block;
 }
