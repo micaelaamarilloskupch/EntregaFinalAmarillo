@@ -1,25 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Discografía</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style-discografia.css">
 </head>
 <body>
 
-    <header>
-        <h1>SECCION DISCOGRAFIA</h1>
+<header class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">aespa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./miembros.html">Miembros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./discografia.html">Discografia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./comeback.html">Comeback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./worldtour.html">World Tour</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./galeria.html">Galería</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
 
-    <nav>
-         <ul>
-            <li><a href="../index.html">HOME</a></li>
-        </ul>
-    </nav>
+<main>
+    <p class="titulo">Discografía de aespa</p>
+    <div class="album-section">
+        <div class="album" onclick="showDetails('album1')">
+            <img src="../img/concept-photos-ot4/savage.jpeg" alt="Savage">
+            <div class="album-title">Savage The 1st Mini Album</div>
+        </div>
+        <div class="album" onclick="showDetails('album2')">
+            <img src="../img/concept-photos-ot4/girls.jpeg" alt="Girls">
+            <div class="album-title">Girls The 2nd Mini Album</div>
+        </div>
+        <div class="album" onclick="showDetails('album3')">
+            <img src="../img/concept-photos-ot4/my-world.jpeg" alt="My World">
+            <div class="album-title">My World The 3rd Mini Album</div>
+        </div>
+        <div class="album" onclick="showDetails('album4')">
+            <img src="../img/concept-photos-ot4/drama.jpeg" alt="Drama">
+            <div class="album-title">Drama The 4th Mini Album</div>
+        </div>
+    </div>
+
+    <div id="album1" class="album-details">
+        <h2 class="name">Savage The 1st Mini Album</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3vyyDkvYWC36DwgZCYd3Wu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hL1tP0_y00U?si=2tfJiGbAIVCYWvLt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a href="#" class="back-button" onclick="hideDetails('album1')">Volver</a>
+    </div>
+
+    <div id="album2" class="album-details">
+        <h2 class="name">Girls The 2nd Mini Album</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4w1dbvUy1crv0knXQvcSeY?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IyHSlMHxoQc?si=jiG-8D0cpL70xUnO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a href="#" class="back-button" onclick="hideDetails('album2')">Volver</a>
+    </div>
+
+    <div id="album3" class="album-details">
+        <h2 class="name">My World The 3rd Mini Album</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/69xF8jTd0c4Zoo7DT3Rwrn?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tX3G0yzQqD4?si=_8IMTofWewoU9tGF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a href="#" class="back-button" onclick="hideDetails('album3')">Volver</a>
+    </div>
+
+    <div id="album4" class="album-details">
+        <h2 class="name">Drama The 4th Mini Album</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5NMtxQJy4wq3mpo3ERVnLs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zz5UeyZue5o?si=EIgIG_lF3pY4Szf1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a href="#" class="back-button" onclick="hideDetails('album4')">Volver</a>
+    </div>
+
+    <script>
+        function showDetails(albumId) {
+            document.querySelectorAll('.album-details').forEach(function(detail) {
+                detail.classList.remove('active');
+            });
+            document.getElementById(albumId).classList.add('active');
+            document.querySelector('.album-section').style.display = 'none';
+        }
+
+        function hideDetails(albumId) {
+            document.getElementById(albumId).classList.remove('active');
+            document.querySelector('.album-section').style.display = 'flex';
+        }
+    </script>
 
 
-    </header>
-
+</main>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
