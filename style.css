@@ -45,6 +45,16 @@
     .section-header {
         font-size: 1.8em;
     }
+    .card {
+        width: 180px;
+        height: 180px;
+        display: inline-flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .card-title, .card-text {
+        font-size: 15px;
+    }
 }
 
 body {
@@ -52,7 +62,7 @@ body {
     color: #e6e6e6;
     font-family: 'aespa-font';
 }
-body main {
+.section text-center {
     z-index: -1;
 }
 ::-webkit-scrollbar {
