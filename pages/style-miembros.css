@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'aespa-font';
-    src: url(/fuentes/aespa-logo-font/aespa_Regular.ttf);
+    src: url(../fuentes/aespa-logo-font/aespa_Regular.ttf);
 }
 @media only screen and (max-width: 500px ){
     .gallery img {
