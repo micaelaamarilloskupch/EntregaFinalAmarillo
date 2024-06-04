@@ -67,6 +67,7 @@ body {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
+    font-family: 'aespa-font';
 }
 .album-details {
     display: none;
@@ -79,6 +80,7 @@ body {
     text-align: center;
     margin-top: 50px;
     font-size: 1cm;
+    font-family: 'aespa-font';
 }
 .album-details.active {
     display: block;
