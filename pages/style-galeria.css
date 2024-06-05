@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'aespa-font';
+    src: url(../fuentes/aespa-logo-font/aespa_Regular.ttf);
+}
+body {
+    background-color: #000000;
+    color: #e6e6e6;
+    font-family: 'aespa-font';
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff; 
+    border-radius: 6px;
+}
+.navbar {
+    background-color: #060037;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    padding: 9px;
+    .navbar-brand{
+        font-size: 30px;
+    }
+}
+.navbar-brand, .nav-link {
+   font-size: 23px;
+    color: #e6e6e6 !important;
+    color: rgb(255, 255, 255);
+    text-decoration: none;  
+    transition: font-size 0.3s, text-shadow 0.3s;
+}
+.navbar-brand:hover, .nav-link:hover {
+    color: #ffffff !important;
+    font-size: 28px;
+    text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.5);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    z-index: -1;
+
+}
+
+.gallery-item img {
+    width: 8cm;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+footer {
+    background-color:rgb(0, 0, 74) ;
+    color: rgb(255, 255, 255);
+    font-family: 'aespa-font';
+    font-size: 15px;
+    text-align: center;
+    margin-top: 3cm;
+    bottom: 0;
+    padding: 9px;
+    right: 0;
+}
+.redes ul li img{
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    margin-top: 10px;
+}
+.redes ul li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
