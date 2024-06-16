@@ -1,0 +1,144 @@
+// _base.scss
+
+@import 'variables';
+@import 'mixins';
+
+// Font face
+@font-face {
+  font-family: $font-family-main;
+  src: url(./fuentes/aespa-logo-font/aespa_Regular.ttf);
+}
+
+// Global styles
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  @include font-family($font-family-main);
+  @include scrollbar-style;
+}
+
+.section text-center {
+  z-index: -1;
+}
+
+// Navbar
+.navbar {
+  background-color: $navbar-bg-color;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  padding: 9px;
+  
+  .navbar-brand {
+    font-size: 30px;
+    @include navbar-link-styles;
+  }
+
+  .nav-link {
+    @include navbar-link-styles;
+  }
+}
+
+// Main content
+.tamano {
+  margin-top: 60px;
+  text-align: center;
+  font-size: $font-size-large;
+  text-shadow: 4px 4px 6px $hover-shadow;
+}
+
+.texto-principal {
+  @include font-family($font-family-main);
+  text-align: center;
+  font-size: $font-size-medium;
+}
+
+// Images
+.tamano-imagen {
+  width: 100%;
+  height: auto;
+}
+
+// Sections
+.section {
+  padding: 60px 0;
+}
+
+.section-header {
+  font-size: $font-size-header;
+  margin-bottom: 40px;
+  transition: transform $transition-duration $transition-ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Cards
+.card {
+  background-color: $card-bg-color;
+  border: 3px solid $card-border-color;
+  width: $card-size;
+  height: $card-size;
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  .card-title, .card-text {
+    color: $secondary-color;
+    font-size: 15px;
+  }
+}
+
+// Buttons
+.btn-primary {
+  background-color: $btn-primary-color;
+  border: none;
+  transition: background-color $transition-duration;
+
+  &:hover {
+    background-color: $btn-primary-hover-color;
+  }
+}
+
+// Gallery
+.gallery img {
+  width: 100%;
+  height: auto;
+  transition: opacity $transition-duration $transition-ease;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Footer
+footer {
+  background-color: rgb(0, 0, 74);
+  color: $secondary-color;
+  @include font-family($font-family-main);
+  font-size: 15px;
+  text-align: center;
+  margin-top: 3cm;
+  bottom: 0;
+  padding: 9px;
+  right: 0;
+}
+
+// Social media icons
+.redes ul li {
+  text-decoration: none;
+  display: inline-block;
+
+  img {
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    margin-top: 10px;
+    transition: transform $transition-duration $transition-ease;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}

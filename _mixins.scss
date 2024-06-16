@@ -1,0 +1,31 @@
+// _mixins.scss
+
+@mixin font-family($font) {
+    font-family: $font;
+  }
+  
+  @mixin scrollbar-style {
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #000000;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $secondary-color;
+      border-radius: 6px;
+    }
+  }
+  
+  @mixin navbar-link-styles {
+    font-size: $font-size-small;
+    color: $primary-color;
+    text-decoration: none;
+    transition: font-size $transition-duration, text-shadow $transition-duration;
+    &:hover {
+      color: $secondary-color;
+      font-size: $font-size-medium + 5px;
+      text-shadow: 4px 4px 6px $hover-shadow;
+    }
+  }
+  

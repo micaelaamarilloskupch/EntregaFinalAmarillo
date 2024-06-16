@@ -1,0 +1,59 @@
+// main.scss
+
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+@media (max-width: 768px) {
+  .tamano {
+    font-size: 50px;
+  }
+
+  .texto-principal {
+    font-size: 20px;
+  }
+
+  .navbar-brand, .nav-link {
+    font-size: 18px;
+    &:hover {
+      font-size: 21px;
+    }
+  }
+
+  .section-header {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 576px) {
+  .tamano {
+    font-size: 40px;
+  }
+
+  .texto-principal {
+    font-size: 18px;
+  }
+
+  .navbar-brand, .nav-link {
+    font-size: 16px;
+    &:hover {
+      font-size: 18px;
+    }
+  }
+
+  .section-header {
+    font-size: 1.8em;
+  }
+
+  .card {
+    width: $card-size;
+    height: $card-size;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .card-title, .card-text {
+      font-size: 15px;
+    }
+  }
+}
