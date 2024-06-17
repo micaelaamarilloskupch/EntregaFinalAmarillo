@@ -1,0 +1,101 @@
+@import 'variables';
+@import 'mixins';
+
+@font-face {
+  font-family: $font-family-main;
+  src: url(../fuentes/aespa-logo-font/aespa_Regular.ttf);
+}
+
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  @include font-family($font-family-main);
+  @include scrollbar-style;
+}
+
+.navbar {
+  background-color: $navbar-bg-color;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  padding: 9px;
+  .navbar-brand, .nav-link {
+    @include link-styles($font-size-md, $font-size-hover, $primary-color, $secondary-color);
+  }
+  .navbar-brand {
+    font-size: $font-size-lg;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  h1 {
+    margin: 0;
+    font-size: $header-font-size;
+    color: $secondary-color;
+    margin-top: 50px;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $gallery-gap;
+  margin-top: 20px;
+  .gallery-item {
+    position: relative;
+    z-index: -1;
+    img {
+      width: $gallery-img-size;
+      height: auto;
+      border-radius: 30px;
+      box-shadow: $box-shadow-light;
+      @include transition(transform $transition-time, box-shadow $transition-time);
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: $box-shadow-hover;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $footer-bg-color;
+  color: $secondary-color;
+  @include font-family($font-family-main);
+  font-size: $footer-font-size;
+  text-align: center;
+  margin-top: 3cm;
+  padding: 9px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.redes {
+  ul {
+    li {
+      display: inline-block;
+      text-decoration: none;
+      img {
+        height: 40px;
+        width: 40px;
+        align-items: center;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

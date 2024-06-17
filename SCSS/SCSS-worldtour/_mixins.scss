@@ -1,0 +1,40 @@
+// Mixins
+@mixin responsive-img($width) {
+    width: $width;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(45, 86, 234);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  @mixin font-style($size, $color) {
+    font-size: $size;
+    color: $color;
+  }
+  
+  @mixin link-style($normal, $hover, $size-normal, $size-hover) {
+    font-size: $size-normal;
+    color: $normal;
+    text-decoration: none;
+    transition: font-size 0.3s, text-shadow 0.3s;
+  
+    &:hover {
+      color: $hover;
+      font-size: $size-hover;
+      text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  @mixin scrollbar-style {
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #000000;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ffffff;
+      border-radius: 6px;
+    }
+  }
+  

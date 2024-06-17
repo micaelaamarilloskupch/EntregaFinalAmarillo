@@ -1,0 +1,31 @@
+// Mixins
+@mixin font-family($family) {
+    font-family: $family;
+  }
+  
+  @mixin scrollbar-style {
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #000000;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ffffff;
+      border-radius: 6px;
+    }
+  }
+  
+  @mixin link-styles($font-size-normal, $font-size-hover, $color-normal, $color-hover) {
+    font-size: $font-size-normal;
+    color: $color-normal;
+    text-decoration: none;
+    transition: font-size 0.3s, text-shadow 0.3s;
+    
+    &:hover {
+      color: $color-hover;
+      font-size: $font-size-hover;
+      text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.5);
+    }
+  }
+  

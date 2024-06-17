@@ -1,0 +1,184 @@
+@import 'variables';
+@import 'mixins';
+@import 'media_queries';
+
+@font-face {
+  font-family: $font-main;
+  src: url(../fuentes/aespa-logo-font/aespa_Regular.ttf);
+}
+
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  font-family: $font-main;
+  @include scrollbar-style;
+}
+
+.navbar {
+  background-color: $navbar-bg;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  padding: 9px;
+
+  .navbar-brand, .nav-link {
+    @include link-style($primary-color, #ffffff, 23px, 28px);
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  margin-top: 70px;
+
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffffff;
+  }
+}
+
+.tour-description {
+  text-align: center;
+  margin: 20px 0;
+  @include font-style(1.2em, #ffffff);
+}
+
+.concerts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($image-medium, 1fr));
+  gap: 80px;
+  margin-top: 20px;
+
+  .concert-item {
+    text-align: center;
+
+    img {
+      @include responsive-img($image-large);
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: $shadow-hover;
+    }
+
+    p {
+      margin-top: 10px;
+      @include font-style(1em, #ffffff);
+    }
+  }
+}
+
+.fan-quotes {
+  text-align: center;
+  margin-top: 40px;
+
+  .quote {
+    margin: 20px 0;
+    font-style: italic;
+    color: #ffffff;
+  }
+}
+
+.song-list {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #0c003c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(5, 217, 221);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+
+.fun-facts {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #07002b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(217, 0, 184);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+
+footer {
+  background-color: $navbar-bg;
+  color: #ffffff;
+  font-family: $font-main;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 3cm;
+  padding: 9px;
+  bottom: 0;
+  width: 100%;
+}
+
+.redes {
+  ul {
+    li {
+      display: inline-block;
+      text-decoration: none;
+
+      img {
+        height: 40px;
+        width: 40px;
+        align-items: center;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+// Media Queries
+@include respond-to(small) {
+  .concerts {
+    grid-template-columns: 1fr;
+  }
+
+  .concert-item img {
+    width: $image-small;
+  }
+}
+
+@include respond-to(medium) {
+  .concert-item img {
+    width: $image-medium;
+  }
+}
+
+@include respond-to(large) {
+  .concert-item img {
+    width: $image-large;
+  }
+}
