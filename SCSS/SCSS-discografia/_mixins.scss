@@ -1,0 +1,32 @@
+@mixin font-family($font) {
+    font-family: $font;
+  }
+  
+  @mixin transition($properties...) {
+    transition: $properties;
+  }
+  
+  @mixin link-styles($font-size, $hover-size, $color, $hover-color) {
+    font-size: $font-size;
+    color: $color !important;
+    text-decoration: none;
+    @include transition(font-size $transition-time, text-shadow $transition-time);
+    &:hover {
+      color: $hover-color !important;
+      font-size: $hover-size;
+      text-shadow: $hover-text-shadow;
+    }
+  }
+  
+  @mixin scrollbar-style {
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: $background-color;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: $secondary-color;
+      border-radius: 6px;
+    }
+  }

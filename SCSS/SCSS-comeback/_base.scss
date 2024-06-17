@@ -1,0 +1,132 @@
+@import 'variables';
+@import 'mixins';
+
+// Font face
+@font-face {
+  font-family: $font-family-main;
+  src: url(../fuentes/aespa-logo-font/aespa_Regular.ttf);
+}
+
+// Global styles
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  @include font-family($font-family-main);
+  @include scrollbar-style;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    margin-top: 50px;
+    font-size: $font-size-header;
+    color: $secondary-color;
+  }
+}
+
+.album-description {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.2em;
+  color: $secondary-color;
+  margin-top: 0;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0;
+  z-index: -1;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    filter: grayscale(20%) brightness(90%);
+    @include transition(transform $transition-duration $transition-ease);
+
+    &:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%) brightness(100%);
+    }
+  }
+}
+
+.teasers {
+  display: flex;
+  justify-content: space-between;
+  gap: $teaser-gap;
+  margin-top: 50px;
+
+  a {
+    flex: 1;
+    position: relative;
+    text-decoration: none;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      @include transition(transform $transition-duration $transition-ease);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.spotify-link {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: $spotify-color;
+    padding: 10px 20px;
+    border: 2px solid $spotify-color;
+    border-radius: 5px;
+    @include transition(background-color $transition-duration, color $transition-duration);
+
+    &:hover {
+      background-color: $spotify-color;
+      color: $secondary-color;
+    }
+  }
+}
+
+footer {
+  background-color: $footer-bg-color;
+  color: $secondary-color;
+  @include font-family($font-family-main);
+  font-size: $footer-font-size;
+  text-align: center;
+  margin-top: $footer-margin-top;
+  padding: $footer-padding;
+
+  .redes ul li {
+    text-decoration: none;
+    display: inline-block;
+
+    img {
+      height: 40px;
+      width: 40px;
+      align-items: center;
+      margin-top: 10px;
+      @include transition(transform $transition-duration $transition-ease);
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

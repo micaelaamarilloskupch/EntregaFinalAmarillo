@@ -1,0 +1,21 @@
+// _navbar.scss
+
+@import 'variables';
+@import 'mixins';
+
+.navbar {
+  background-color: $navbar-bg-color;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  padding: 9px;
+
+  .navbar-brand {
+    @include link-styles($font-size-small, $font-size-xsmall, $secondary-color, rgba($secondary-color, 0.5));
+  }
+
+  .nav-link {
+    @include link-styles($font-size-small, $font-size-small + 5px, $secondary-color, rgba($secondary-color, 0.5));
+  }
+}
+

@@ -1,8 +1,8 @@
 // main.scss
 
-@import 'variables';
-@import 'mixins';
-@import 'base';
+@import './SCSS-MAIN/variables';
+@import './SCSS-MAIN/mixins';
+@import './SCSS-MAIN/base';
 
 @media (max-width: 768px) {
   .tamano {

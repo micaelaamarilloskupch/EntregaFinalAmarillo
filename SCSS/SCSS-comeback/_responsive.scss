@@ -1,0 +1,37 @@
+@import 'variables';
+
+@media (max-width: 500px) {
+  .gallery img {
+    width: auto;
+    height: auto;
+  }
+  .cada-una {
+    font-size: auto;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 968px) {
+  .gallery img {
+    width: auto;
+    height: auto;
+  }
+  .cada-una {
+    font-size: auto;
+  }
+}
+
+@media (min-width: 961px) {
+  .gallery img {
+    width: auto;
+    height: auto;
+  }
+  .cada-una {
+    font-size: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .photos img, .teasers a {
+    width: 100%;
+  }
+}

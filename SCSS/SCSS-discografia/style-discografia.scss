@@ -1,0 +1,131 @@
+@import 'variables';
+@import 'mixins';
+
+@font-face {
+  font-family: $font-family-main;
+  src: url(../fuentes/aespa-logo-font/aespa_Regular.ttf);
+}
+
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  @include font-family($font-family-main);
+  @include scrollbar-style;
+}
+
+.navbar {
+  background-color: $navbar-bg-color;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  padding: 9px;
+  .navbar-brand, .nav-link {
+    @include link-styles($font-size-md, $font-size-hover, $primary-color, $secondary-color);
+  }
+  .navbar-brand {
+    font-size: $font-size-lg;
+  }
+}
+
+.titulo {
+  color: $primary-color;
+}
+
+.album-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.album {
+  width: $album-width;
+  margin: $album-margin;
+  text-align: center;
+  img {
+    width: 100%;
+    border-radius: 10px;
+    @include transition(transform 0.2s);
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .album-title {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    @include font-family($font-family-main);
+  }
+}
+
+.album-details {
+  display: none;
+  padding: 30px;
+  background-color: $background-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  &.active {
+    display: block;
+    .name {
+        margin-top: 30px;
+        text-align: center;
+    }
+  }
+  iframe {
+    width: 100%;
+    height: $iframe-height;
+    border: none;
+    border-radius: 10px;
+    margin-top: 70px;
+  }
+}
+
+.back-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: $btn-background-color;
+  color: $secondary-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer {
+  background-color: ($navbar-bg-color);
+  color: $secondary-color;
+  @include font-family($font-family-main);
+  font-size: 15px;
+  text-align: center;
+  margin-top: 3cm;
+  padding: 9px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.redes {
+  ul {
+    li {
+      display: inline-block;
+      text-decoration: none;
+      img {
+        height: 40px;
+        width: 40px;
+        align-items: center;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .album {
+    width: 100px;
+  }
+  .album-details iframe {
+    height: 150px;
+  }
+}
